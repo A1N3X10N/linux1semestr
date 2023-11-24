@@ -1,10 +1,8 @@
 #include <stdio.h>
-int main(void)
+int main(int argc, char *argv[])
 {
-int a,b,c;
-a=3;
-b=2;
-printf ("c= %d \n", a+b);
-printf ("a= %d \n", a);
-printf ("b= %d \n", b);
+for (int i=0; i<argc;i++){
+printf("%s\n", argv[i]);
+}
+return 0;
 }

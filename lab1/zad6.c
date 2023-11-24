@@ -1,17 +1,19 @@
 #include <stdio.h>
-int main (int argc, char * argv[])
+int main(void)
 {
-char*name = argv[1];
 char buffer[256];
-FILE *fp = fopen(name, "r");
+FILE *fp = fopen("forzad6", "r");
 FILE *fo = fopen("forzad6.2", "w");
-if (fp)
+for (int i=0;i<3;i++)
 {
-while ((fgets(buffer, 256, fp))!=NULL)
+if ((fgets(buffer, 256, fp))!=NULL)
 {
 	fputs(buffer,fo);
+}else{
+break;
+}
 }
 fclose(fp);
 fclose(fo);
-}
+return 0;
 }

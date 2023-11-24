@@ -5,7 +5,7 @@ int main (int argc, char * argv[])
 	char*file2 = "forzad8";
 	char buffer[256];
 	FILE*f1 = fopen(file1, "r");
-	FILE*f2 = fopen(file2, "w");
+	FILE*f2 = fopen(file2, "a");
 	char info[100];
 	fgets(info, sizeof(info), stdin);
 	fprintf(f2,"%s", info);
